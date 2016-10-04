@@ -21,7 +21,7 @@ function NarrowItDownController (MenuSearchService) {
 
 	  narrowCtrl.removeItem = function(index) {
 		  narrowCtrl.found.splice(index,1);
-	  }
+	  };
 }
 
 
@@ -41,12 +41,12 @@ function FoundItems() {
 function ShoppingListDirectiveController() {
   var list = this;
   list.empty = function() {
-	  if(list.found.length == 0) {
+	  if(list.found.length === 0) {
 		  return true;
 	  }
 
 	  return false;
-  }
+  };
 }
 
 MenuSearchService.$inject = ['$http'];
